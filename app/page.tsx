@@ -8,8 +8,8 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { SparklesCore } from "../components/ui/sparkles";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 import Link from "next/link";
-import Timeline from "../components/custom/timeline.tsx";
-import { Vortex } from "../components/ui/vortex.tsx";
+import Timeline from "../components/custom/timeline";
+import { Vortex } from "../components/ui/vortex";
  
 
 export default function Home() {
