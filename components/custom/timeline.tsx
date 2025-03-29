@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import { Timeline } from "@/components/ui/timeline";
+import { Timeline } from "@/components/ui/timeline.tsx";
 import { Github } from "lucide-react"
 
 export default function TimelineDemo() {
