@@ -62,6 +62,7 @@ export function SidebarMain({ Children }: { Children: React.ReactNode }) {
               link={{
                 label: "Mail me?",
                 href: "mailto:ohayouarmaan@gmail.com",
+                icon: null
               }}
             />
           </div>

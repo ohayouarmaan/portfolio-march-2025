@@ -1,9 +1,9 @@
 "use client";
-import { SidebarMain } from "../components/custom/sidebar.tsx";
+import { SidebarMain } from "../components/custom/sidebar";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { GlareCard } from "../components/ui/glare-card.tsx";
-import { FloatingDockMain } from "../components/custom/floatingcontact.tsx";
+import { GlareCard } from "../components/ui/glare-card";
+import { FloatingDockMain } from "../components/custom/floatingcontact";
 import Link from "next/link";
 
 export default function Home() {
