@@ -121,6 +121,20 @@ const Dashboard = () => {
         <div id="projects" className="p-10 bg-neutral-200 rounded-lg mt-4">
           <h1 className="font-bold text-2xl pb-6">Projects.</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Proton VM */}
+            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
+              <p className="font-bold text-white text-lg">Proton Virtual Machine</p>
+              <p className="font-normal text-base text-neutral-200 mt-4">
+                A stack-based virtual machine with custom bytecode encoding, a custom assembler, and its own allocator. Instructions written completely from scratch!
+              </p>
+              <div className="flex items-center justify-center mt-5">
+                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
+                  <a href="https://github.com/ohayouarmaan/proton-vm" target="_blank" rel="noopener noreferrer">
+                    Github
+                  </a>
+                </button>
+              </div>
+            </GlareCard>
             {/* Flamingo */}
             <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
               <p className="font-bold text-white text-lg">Flamingo</p>
@@ -136,20 +150,6 @@ const Dashboard = () => {
               </div>
             </GlareCard>
 
-            {/* Proton VM */}
-            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-              <p className="font-bold text-white text-lg">Proton Virtual Machine</p>
-              <p className="font-normal text-base text-neutral-200 mt-4">
-                A stack-based virtual machine with custom bytecode encoding, a custom assembler, and its own allocator. Instructions written completely from scratch!
-              </p>
-              <div className="flex items-center justify-center mt-5">
-                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                  <a href="https://github.com/ohayouarmaan/proton-vm" target="_blank" rel="noopener noreferrer">
-                    Github
-                  </a>
-                </button>
-              </div>
-            </GlareCard>
 
             {/* Yazu */}
             <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
