@@ -88,10 +88,6 @@ const AboutMe = () => {
       <strong className="font-semibold text-gray-900">
         drum and bass, shoegaze, and house music
       </strong>
-      , playing{" "}
-      <strong className="font-semibold text-gray-900">guitar</strong> in my band{" "}
-      <strong className="font-semibold text-gray-900">Riverrun</strong>, or dreaming up the
-      perfect caravan trip.
       <br />
       <br />
       Check out my projects below—whether it’s{" "}
@@ -106,7 +102,7 @@ const AboutMe = () => {
 const Dashboard = () => {
   return (
     <div className="p-8 overflow-y-scroll scroll-smooth">
-      <div id="about-me" className="grid grid-cols-2 bg-neutral-200 rounded-lg">
+      <div id="about-me" className="grid grid-cols-1 md:grid-cols-2 bg-neutral-200 rounded-lg">
         <div className="intro-section col-span-1 rounded-lg p-10">
           <h1 className="font-bold text-2xl">
             Hello, I'm Armaan Gupta!
@@ -114,65 +110,78 @@ const Dashboard = () => {
           <br />
           <AboutMe />
         </div>
-        <Image src={"/avatar.png"} width={450} height={450} className="mx-auto my-auto" alt={"avatar"} />
+        <Image 
+          src={"/avatar.png"} 
+          width={450} 
+          height={450} 
+          className="hidden md:block mx-auto my-auto" 
+          alt={"avatar"} 
+        />
       </div>
-      <div id="projects" className="p-10 bg-neutral-200 rounded-lg mt-4">
-        <h1 className="font-bold text-2xl pb-6">Projects.</h1>
-        <div className="flex gap-6">
-          <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-            <p className="font-bold text-white text-lg">Flamingo</p>
-            <p className="font-normal text-base text-neutral-200 mt-4">
-              A programming language, With a custom pratt parser, and a top down tree recursive interpreter. With a custom syntax and some really cool features
-            </p>
-            <div className="flex items-center justify-center mt-5">
-              <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                <a href={"https://github.com/ohayouarmaan/flamingo"}>
-                  Github
-                </a>
-              </button>
-            </div>
-          </GlareCard>
-          <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-            <p className="font-bold text-white text-lg">Proton Virtual Machine</p>
-            <p className="font-normal text-base text-neutral-200 mt-4">
-              A stack based virtual machine with custom byte code encoding and a custom assembler and it's own allocator with instructions written from scratch!
-            </p>
-            <div className="flex items-center justify-center mt-5">
-              <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                <a href={"https://github.com/ohayouarmaan/quark-vm-2"}>
-                  Github
-                </a>
-              </button>
-            </div>
-          </GlareCard>
-          <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-            <p className="font-bold text-white text-lg">Ramen Backend Framework</p>
-            <p className="font-normal text-base text-neutral-200 mt-4">
-              A lightweight micro REST API framework for Node.js with a custom router, middleware support, and optimized request handling for high performance!
-            </p>
-            <div className="flex items-center justify-center mt-5">
-              <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                <a href={"https://github.com/ohayouarmaan/ramen"}>
-                  Github
-                </a>
-              </button>
-            </div>
-          </GlareCard>
-          <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-            <p className="font-bold text-white text-lg">Yazu: JSON Formatter</p>
-            <p className="font-normal text-base text-neutral-200 mt-4">
-              An open source CLI based JSON formatter written in rust which is marginally faster thatn Prettier, It has it's own parser, transpiler and supports all the modern JSON values.
-            </p>
-            <div className="flex items-center justify-center mt-5">
-              <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                <a href={"https://github.com/ohayouarmaan/yazu"}>
-                  Github
-                </a>
-              </button>
-            </div>
-          </GlareCard>
+        <div id="projects" className="p-10 bg-neutral-200 rounded-lg mt-4">
+          <h1 className="font-bold text-2xl pb-6">Projects.</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Flamingo */}
+            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
+              <p className="font-bold text-white text-lg">Flamingo</p>
+              <p className="font-normal text-base text-neutral-200 mt-4">
+                A programming language with a custom Pratt parser and a top-down tree recursive interpreter. Featuring custom syntax and some really cool features.
+              </p>
+              <div className="flex items-center justify-center mt-5">
+                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
+                  <a href="https://github.com/ohayouarmaan/flamingo" target="_blank" rel="noopener noreferrer">
+                    Github
+                  </a>
+                </button>
+              </div>
+            </GlareCard>
+
+            {/* Proton VM */}
+            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
+              <p className="font-bold text-white text-lg">Proton Virtual Machine</p>
+              <p className="font-normal text-base text-neutral-200 mt-4">
+                A stack-based virtual machine with custom bytecode encoding, a custom assembler, and its own allocator. Instructions written completely from scratch!
+              </p>
+              <div className="flex items-center justify-center mt-5">
+                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
+                  <a href="https://github.com/ohayouarmaan/proton-vm" target="_blank" rel="noopener noreferrer">
+                    Github
+                  </a>
+                </button>
+              </div>
+            </GlareCard>
+
+            {/* Yazu */}
+            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
+              <p className="font-bold text-white text-lg">Yazu</p>
+              <p className="font-normal text-base text-neutral-200 mt-4">
+                A high-performance distributed API call scheduler with fault tolerance. Handles retries, prioritization, and error recovery like a beast.
+              </p>
+              <div className="flex items-center justify-center mt-5">
+                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
+                  <a href="https://github.com/ohayouarmaan/yazu" target="_blank" rel="noopener noreferrer">
+                    Github
+                  </a>
+                </button>
+              </div>
+            </GlareCard>
+
+            {/* Ramen */}
+            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
+              <p className="font-bold text-white text-lg">Ramen</p>
+              <p className="font-normal text-base text-neutral-200 mt-4">
+                A micro REST API framework written in TypeScript. Lightweight, blazing fast, perfect for building tiny, efficient backends with zero bloat.
+              </p>
+              <div className="flex items-center justify-center mt-5">
+                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
+                  <a href="https://github.com/ohayouarmaan/ramen" target="_blank" rel="noopener noreferrer">
+                    Github
+                  </a>
+                </button>
+              </div>
+            </GlareCard>
+          </div>
         </div>
-      </div>
     <div className="relative rounded-lg mt-4 flex flex-col h-[50rem] w-full items-center justify-center bg-neutral-200 dark:bg-black">
       <div
         className={cn(
