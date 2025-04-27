@@ -129,7 +129,7 @@ const Dashboard = () => {
               </p>
               <div className="flex items-center justify-center mt-5">
                 <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                  <a href="https://github.com/ohayouarmaan/proton-vm" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/ohayouarmaan/quark-vm-2" target="_blank" rel="noopener noreferrer">
                     Github
                   </a>
                 </button>
