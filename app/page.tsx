@@ -225,6 +225,34 @@ const Dashboard = () => {
               </ul>
             </li>
           </ul>
+          <br />
+          <ul className="list-disc">
+            <li>
+              <div className="flex gap-3">
+                <h1 className="font-semibold">Ramen: A micro framework for creating REST API in Nodejs</h1>
+                <Link className="text-cyan-600" href="https://github.com/ohayouarmaan/ramen">
+                  Github
+                </Link>
+                <Link className="text-cyan-600" href="https://www.npmjs.com/package/raments">
+                  NpmJS
+                </Link>
+              </div>
+              <ul className="list-disc pl-4">
+                <li>
+                  <p>Ramen is a micro framework for creating REST APIs</p>
+                </li>
+                <li>
+                  <p>Has different ways to define routes.</p>
+                </li>
+                <li>
+                  <p>Ramen is Type safe, it has types for all of it's core functionalities and objects.</p>
+                </li>
+                <li>
+                  <p>Supports multiple routers</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
     <div className="relative rounded-lg mt-4 flex flex-col h-[50rem] w-full items-center justify-center bg-neutral-200 dark:bg-black">
       <div
