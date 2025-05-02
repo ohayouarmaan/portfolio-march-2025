@@ -120,67 +120,111 @@ const Dashboard = () => {
       </div>
         <div id="projects" className="p-10 bg-neutral-200 rounded-lg mt-4">
           <h1 className="font-bold text-2xl pb-6">Projects.</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Proton VM */}
-            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-              <p className="font-bold text-white text-lg">Proton Virtual Machine</p>
-              <p className="font-normal text-base text-neutral-200 mt-4">
-                A stack-based virtual machine with custom bytecode encoding, a custom assembler, and its own allocator. Instructions written completely from scratch!
-              </p>
-              <div className="flex items-center justify-center mt-5">
-                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                  <a href="https://github.com/ohayouarmaan/quark-vm-2" target="_blank" rel="noopener noreferrer">
-                    Github
-                  </a>
-                </button>
+          <ul className="list-disc">
+            <li>
+              <div className="flex gap-3">
+                <h1 className="font-semibold">Proton VM</h1>
+                <Link className="text-cyan-600" href="https://github.com/ohayouarmaan/quark-vm-2">
+                  Github
+                </Link>
               </div>
-            </GlareCard>
-            {/* Flamingo */}
-            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-              <p className="font-bold text-white text-lg">Flamingo</p>
-              <p className="font-normal text-base text-neutral-200 mt-4">
-                A programming language with a custom Pratt parser and a top-down tree recursive interpreter. Featuring custom syntax and some really cool features.
-              </p>
-              <div className="flex items-center justify-center mt-5">
-                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                  <a href="https://github.com/ohayouarmaan/flamingo" target="_blank" rel="noopener noreferrer">
-                    Github
-                  </a>
-                </button>
+              <ul className="list-disc pl-4">
+                <li>
+                  <p>ProtonVM is a 16-bit Stack Based Language Virtual Machine for my Programming language (flamingo)</p>
+                </li>
+                <li>
+                  <p>it has it's own custom managed memory system</p>
+                </li>
+                <li>
+                  <p>hard separation between Heap and Raw buffer.</p>
+                </li>
+                <li>
+                  <p>It can also load & run Foreign DLLs in a safe manner.</p>
+                </li>
+                <li>
+                  <p>Custom assembler with it's own Syntax.</p>
+                </li>
+                <li>
+                  <p>Allows users to execute native syscalls (only allowing usermode for memory safety)</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <br />
+          <ul className="list-disc">
+            <li>
+              <div className="flex gap-3">
+                <h1 className="font-semibold">Flamingo</h1>
+                <Link className="text-cyan-600" href="https://github.com/ohayouarmaan/flamingo">
+                  Github
+                </Link>
               </div>
-            </GlareCard>
-
-
-            {/* Yazu */}
-            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-              <p className="font-bold text-white text-lg">Yazu</p>
-              <p className="font-normal text-base text-neutral-200 mt-4">
-                A high-performance distributed API call scheduler with fault tolerance. Handles retries, prioritization, and error recovery like a beast.
-              </p>
-              <div className="flex items-center justify-center mt-5">
-                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                  <a href="https://github.com/ohayouarmaan/yazu" target="_blank" rel="noopener noreferrer">
-                    Github
-                  </a>
-                </button>
+              <ul className="list-disc pl-4">
+                <li>
+                  <p>Flamingo is a High Level Dynamically Typed interpretted programming language written from scratch</p>
+                </li>
+                <li>
+                  <p>Functional Programming language</p>
+                </li>
+                <li>
+                  <p>Supports Structs</p>
+                </li>
+                <li>
+                  <p>Custom Grammar & Custom Syntax treating loops as accumulators and conditionals as expressions</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <br />
+          <ul className="list-disc">
+            <li>
+              <div className="flex gap-3">
+                <h1 className="font-semibold">MMDB: Redis Clone.</h1>
+                <Link className="text-cyan-600" href="https://github.com/ohayouarmaan/mmdb">
+                  Github
+                </Link>
               </div>
-            </GlareCard>
-
-            {/* Ramen */}
-            <GlareCard className="flex flex-col items-start justify-center py-8 px-6">
-              <p className="font-bold text-white text-lg">Ramen</p>
-              <p className="font-normal text-base text-neutral-200 mt-4">
-                A micro REST API framework written in TypeScript. Lightweight, blazing fast, perfect for building tiny, efficient backends with zero bloat.
-              </p>
-              <div className="flex items-center justify-center mt-5">
-                <button className="px-8 z-[1000] py-2 rounded-sm bg-[#000000] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-brown-500 cursor-pointer">
-                  <a href="https://github.com/ohayouarmaan/ramen" target="_blank" rel="noopener noreferrer">
-                    Github
-                  </a>
-                </button>
+              <ul className="list-disc pl-4">
+                <li>
+                  <p>MMDB is an in memory database which supports resp protocol and all the resp functionalities</p>
+                </li>
+                <li>
+                  <p>Implements both partial sync replication and full resync replication</p>
+                </li>
+                <li>
+                  <p>Can load data from existing RDB files.</p>
+                </li>
+                <li>
+                  <p>Supports all the CRUD Commands as well as other commands check README for more info.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <br />
+          <ul className="list-disc">
+            <li>
+              <div className="flex gap-3">
+                <h1 className="font-semibold">Yazu: An Open source JSON Formatter</h1>
+                <Link className="text-cyan-600" href="https://github.com/ohayouarmaan/yazu">
+                  Github
+                </Link>
               </div>
-            </GlareCard>
-          </div>
+              <ul className="list-disc pl-4">
+                <li>
+                  <p>Yazu is an Open Source JSON formatter which is 30% faster than conventional JSON Formatter like Prettier</p>
+                </li>
+                <li>
+                  <p>Implements it's own Cusotm Parser</p>
+                </li>
+                <li>
+                  <p>Has it's own Transpiler, i.e. it can output prettified JSON</p>
+                </li>
+                <li>
+                  <p>Supports Modern JSON Syntax</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
     <div className="relative rounded-lg mt-4 flex flex-col h-[50rem] w-full items-center justify-center bg-neutral-200 dark:bg-black">
       <div
